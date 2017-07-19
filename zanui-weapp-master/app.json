@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "example/map/baidu",
+    "example/form/index"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#FAFAFA",
+    "navigationBarTitleText": "AnanMap",
+    "navigationBarTextStyle":"black",
+    "backgroundTextStyle":"dark",
+    "backgroundColor": "#f9f9f9"
+  },
+  "debug": true
+}
+

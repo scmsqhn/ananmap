@@ -1,0 +1,53 @@
+<view class="container">
+<scroll-view scroll-y="true">
+<!--
+<view class="section"> 
+  <input placeholder="输入关键字" auto-focus type="text" bindinput="onSuggest"/> 
+</view> 
+-->
+<view class="sug_info"> 
+  <text>{{suginfo}}</text> 
+</view>
+<view class="map_container"> 
+
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" 
+      controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" 
+      bindmarkertap="markertap" polyline="{{polyline}}" circles="{{circles}}" 
+      bindregionchange="regionchange" show-location 
+      style="width: 100%; height: 350px;"></map>
+<view class="zan-panel">
+    <view style="padding: 5px;">当前房间 {{curRoom}}</view>
+    <view style="padding: 5px;">当前设备 {{device}}</view>
+</view>
+<view class="zan-panel">
+    <view style="padding: 5px;">当前时刻 {{time}}</view>
+    <view style="padding: 5px;">当前位置 {{latitude}} {{longitude}}</view>
+</view>
+<!--
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" 
+      show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+-->
+</view> 
+<view class="zan-panel" style="padding:5px;">
+    <button class="zan-btn zan-btn--small-flex" bindtap="upDevice">上一设备</button>
+    <button class="zan-btn zan-btn--small-flex zan-btn--primary" bindtap="downDevice">下一设备</button>
+</view>
+<view class="zan-panel" style="padding:5px;">
+    <button class="zan-btn zan-btn--small-flex" bindtap="upTime">上一时刻</button>
+    <button class="zan-btn zan-btn--small-flex zan-btn--primary" bindtap="downTime">下一时刻</button>
+</view>
+<view class="zan-panel" style="padding:5px;">
+    <button class="zan-btn zan-btn--small" bindtap="setRoom">选择房间</button>
+</view>
+<!--      
+    <button class="zan-btn zan-btn--small zan-btn--primary" bindtap="takePic">拍照打卡</button>
+      <button class="zan-btn zan-btn--danger" bindtap="onSearch">确认付款</button>
+      <button class="zan-btn zan-btn--warn" bindtap="onRegeo">确认付款</button>
+-->
+<view class="place_info"> 
+  <text>{{placeData.title}}</text> 
+  <text>{{placeData.address}}</text> 
+  <text>{{placeData.telephone}}</text> 
+</view>
+</scroll-view>
+</view>
